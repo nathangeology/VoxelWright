@@ -4,6 +4,10 @@
 
 VoxelWright reads Bedrock structure files ending in `.mcstructure`. You do not need to turn the world into Java Edition first.
 
+## Outside tutorial
+
+[Microsoft's Structure Blocks guide](https://learn.microsoft.com/en-us/minecraft/creator/documents/structures/introductiontostructureblocks?view=minecraft-bedrock-stable) shows how to mark a build, save it, and export an `.mcstructure` file.
+
 ## Export the structure
 
 1. Open the Bedrock world in Creative mode with cheats on.
@@ -14,7 +18,7 @@ VoxelWright reads Bedrock structure files ending in `.mcstructure`. You do not n
 6. Save the structure.
 7. Use the structure block's export button to save an `.mcstructure` file.
 
-File export is available in Bedrock for Windows. Microsoft shows the full process in its [Structure Blocks guide](https://learn.microsoft.com/en-us/minecraft/creator/documents/structures/introductiontostructureblocks?view=minecraft-bedrock-stable).
+File export is available in Bedrock for Windows.
 
 ## Import it into Studio
 

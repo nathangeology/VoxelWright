@@ -27,6 +27,13 @@ VoxelWright is in private beta. The plugin code is kept in a private repository.
 
 New to voxel tools? The [glossary](docs/glossary.md) explains the words used in the plugin.
 
+## Make a Minecraft file
+
+- Java Edition: [WorldEdit clipboard and schematic guide](https://worldedit.enginehub.org/en/latest/usage/clipboard/)
+- Bedrock Edition: [Microsoft's Structure Blocks guide](https://learn.microsoft.com/en-us/minecraft/creator/documents/structures/introductiontostructureblocks?view=minecraft-bedrock-stable)
+
+These are outside guides maintained by WorldEdit and Microsoft. They show how to select a build and save the file that VoxelWright opens.
+
 ## Ask for help or share an idea
 
 - [Report a bug](https://github.com/nathangeology/VoxelWright/issues/new?template=bug-report.yml)

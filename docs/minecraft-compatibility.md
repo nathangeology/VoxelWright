@@ -9,6 +9,11 @@ VoxelWright is an independent Roblox Studio plugin. It can read these files:
 
 VoxelWright does not read a whole Minecraft world. Export the part you want first.
 
+## Guides for making a file
+
+- Java Edition: [WorldEdit clipboard and schematic guide](https://worldedit.enginehub.org/en/latest/usage/clipboard/)
+- Bedrock Edition: [Microsoft's Structure Blocks guide](https://learn.microsoft.com/en-us/minecraft/creator/documents/structures/introductiontostructureblocks?view=minecraft-bedrock-stable)
+
 ## What comes across
 
 - Solid blocks become Roblox Parts.

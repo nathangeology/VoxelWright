@@ -4,14 +4,16 @@
 
 VoxelWright reads Sponge schematic v2 and v3 files ending in `.schem`.
 
+## Outside tutorial
+
+The [official WorldEdit clipboard guide](https://worldedit.enginehub.org/en/latest/usage/clipboard/) explains how to copy a selection, save a `.schem` file, and find the schematic folder.
+
 ## Make the file with WorldEdit
 
 1. In Java Edition, select the build you want with WorldEdit.
 2. Copy the selection into the WorldEdit clipboard.
 3. Run `//schem save build_name`.
 4. Find `build_name.schem` in your WorldEdit schematic folder. Ask the server owner if you cannot open that folder.
-
-WorldEdit lists the current command on its [official schematic command page](https://worldedit.enginehub.org/en/latest/commands/#schematic-save).
 
 ## Import it into Studio
 
