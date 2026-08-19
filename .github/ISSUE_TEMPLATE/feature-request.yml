@@ -1,0 +1,47 @@
+name: Feature request
+description: Share an idea that would make VoxelWright more useful.
+title: "[Idea]: "
+labels: [enhancement, needs-triage]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Tell us about the job before telling us the fix.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help?
+      description: Explain the idea with a short example.
+    validations:
+      required: true
+  - type: dropdown
+    id: workflow
+    attributes:
+      label: Which part of VoxelWright is this about?
+      options:
+        - File import
+        - Turning a Studio model into blocks
+        - Making fewer Parts
+        - Minecraft block shapes or colors
+        - Textures
+        - MagicaVoxel export
+        - Plugin window and wording
+        - Documentation
+        - Something new
+    validations:
+      required: true
+  - type: textarea
+    id: workaround
+    attributes:
+      label: How do you do this now?
+      description: It is fine to leave this blank if there is no workaround.
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: File check
+      options:
+        - label: I did not attach a private file or a file I do not have permission to share.
+          required: true

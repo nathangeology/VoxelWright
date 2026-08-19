@@ -1,0 +1,28 @@
+name: Documentation problem
+description: Tell us when a help page is wrong, missing, or hard to follow.
+title: "[Docs]: "
+labels: [documentation, needs-triage]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Which page needs work?
+      placeholder: Paste the page link or name.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What was confusing or wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: What would make it clearer?
+      description: A short example is helpful but not required.
+  - type: input
+    id: version
+    attributes:
+      label: VoxelWright version
+      description: Add this only if the page does not match the plugin you used.

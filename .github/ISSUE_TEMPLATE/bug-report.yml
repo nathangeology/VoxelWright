@@ -1,0 +1,83 @@
+name: Bug report
+description: Tell us when VoxelWright does not work as expected.
+title: "[Bug]: "
+labels: [bug, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping us fix VoxelWright. Do not attach private files or files you do not have permission to share.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What went wrong?
+      description: Tell us the main problem in one or two sentences.
+    validations:
+      required: true
+  - type: dropdown
+    id: workflow
+    attributes:
+      label: What were you doing?
+      options:
+        - Importing a .vox file
+        - Importing a Java .schem file
+        - Importing a Bedrock .mcstructure file
+        - Turning a Studio model into voxels
+        - Making a generated model use fewer Parts
+        - Adding or changing textures
+        - Exporting for MagicaVoxel
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to see the bug
+      description: List the buttons you clicked and the choices you made.
+      placeholder: |
+        1. Select ...
+        2. Click ...
+        3. See ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead?
+    validations:
+      required: true
+  - type: input
+    id: plugin-version
+    attributes:
+      label: VoxelWright version
+      placeholder: 0.4.0-beta.2
+    validations:
+      required: true
+  - type: input
+    id: studio-version
+    attributes:
+      label: Studio version and computer
+      placeholder: Studio version, Windows or Mac
+  - type: textarea
+    id: report
+    attributes:
+      label: Import report or error text
+      description: Paste the copyable report or error text. Remove private names first.
+      render: text
+  - type: textarea
+    id: size
+    attributes:
+      label: Model size
+      description: Add the file type, voxel count, Part estimate, or selection cell count if you know it.
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: File check
+      options:
+        - label: I did not attach a private file or a file I do not have permission to share.
+          required: true
