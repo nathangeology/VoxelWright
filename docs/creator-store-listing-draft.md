@@ -1,6 +1,6 @@
 # Creator Store listing draft
 
-This page is a work note. It is not final store text.
+This older placeholder now points to the fuller [Creator Store materials plan](store-materials.md).
 
 ## Name
 

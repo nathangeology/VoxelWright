@@ -1,5 +1,9 @@
 # VoxelWright
 
+<p align="center">
+  <img src="assets/brand/finalists/voxelwright-primary-interlock.png" alt="VoxelWright interlocking block logo" width="220">
+</p>
+
 VoxelWright turns voxel files and Studio models into Roblox Parts.
 
 It can:
@@ -26,6 +30,11 @@ VoxelWright is in private beta. The plugin code is kept in a private repository.
 3. If something goes wrong, read [Troubleshooting](docs/troubleshooting.md).
 
 New to voxel tools? The [glossary](docs/glossary.md) explains the words used in the plugin.
+
+## Brand and store work
+
+- [See the chosen logo system and earlier ideas](docs/logo-options.md)
+- [Read the Creator Store media and copy plan](docs/store-materials.md)
 
 ## Make a Minecraft file
 
