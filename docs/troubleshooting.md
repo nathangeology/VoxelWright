@@ -23,6 +23,12 @@ Large models take time to scan and build. Cancel the job, choose a larger voxel 
 
 Read the source card and review box. You may need to choose a file, select a model, run the analysis, or enter a valid voxel size.
 
+For an `.mcworld` file, check every World Range box and click **Apply World Range**. Creation stays off until the selected range has been checked.
+
+## My `.mcworld` file will not import
+
+Close the Bedrock world before copying or exporting its archive. Then try again with the complete `.mcworld` file. VoxelWright currently reads supported modern Overworld chunks only. If the report names an unsupported chunk format, import a smaller structure with an `.mcstructure` file instead.
+
 ## Some Minecraft blocks look different
 
 Click a warning badge. The full report lists color replacements, box-shape copies, full-cube replacements, and records that were not built.
@@ -30,6 +36,10 @@ Click a warning badge. The full report lists color replacements, box-shape copie
 ## A texture is blank
 
 Check the Roblox image ID. Make sure the image has passed moderation and the place owner has permission to use it.
+
+## Water does not move
+
+Water moves only during Studio Play/Test. It needs **Textured Exposed Faces** and a mapping for `minecraft:water`. After changing the mapping, create a new import.
 
 ## I found a bug
 

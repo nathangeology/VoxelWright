@@ -6,8 +6,9 @@ VoxelWright is an independent Roblox Studio plugin. It can read these files:
 
 - Java Edition Sponge schematic v2 and v3 files ending in `.schem`.
 - Bedrock Edition structure files ending in `.mcstructure`.
+- Selected Overworld ranges from Bedrock Edition `.mcworld` archives.
 
-VoxelWright does not read a whole Minecraft world. Export the part you want first.
+For an `.mcworld` archive, choose the X, Y, and Z range you want in VoxelWright. Read [Import part of a Bedrock Edition world](import-bedrock-world.md).
 
 ## Guides for making a file
 
@@ -18,20 +19,24 @@ VoxelWright does not read a whole Minecraft world. Export the part you want firs
 
 - Solid blocks become Roblox Parts.
 - Block colors use a built-in color map.
-- Some common shapes can use editable box shapes.
-- Your own Roblox image IDs can be placed on visible block faces.
+- **Common Shapes** can use editable box shapes for common blocks such as slabs, stairs, fences, panes, plants, chains, hanging signs, lights, and controls.
+- Your own Roblox image IDs can be placed on visible block faces in either geometry mode.
+- Supported sign text is placed on Common Shapes sign boards.
+- Mapped water scrolls during Studio Play/Test.
+- Glowstone, shroomlights, sea lanterns, lanterns, torches, and powered redstone lamps create Roblox PointLights.
 - Glass and other known clear blocks keep their transparency.
 
 ## What does not come across
 
 - Mobs and other entities
 - Chest contents
-- Sign text
 - Command block commands
 - Redstone behavior
 - Minecraft texture art
 
-The import report lists content that VoxelWright skipped or changed. Read it before you create Parts.
+Entities, inventories, command data, ticks, actor data, biomes, and gameplay behavior remain out of scope. The import report lists content that VoxelWright skipped or changed.
+
+Read the import report before you create Parts.
 
 ## Your files and textures
 

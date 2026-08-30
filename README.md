@@ -11,9 +11,10 @@ It can:
 - Open MagicaVoxel `.vox` files.
 - Open Java Edition `.schem` files.
 - Open Bedrock Edition `.mcstructure` files.
+- Open a selected range from a Bedrock Edition `.mcworld` archive.
 - Turn a model in Studio into small 3D blocks called voxels.
 - Join nearby blocks to make fewer Parts.
-- Add your own Roblox texture images to Minecraft-style blocks.
+- Add your own Roblox texture images to Minecraft-style blocks, including Common Shapes.
 
 VoxelWright is in private beta. The plugin code is kept in a private repository. This public repository holds help pages and the issue tracker.
 
@@ -24,6 +25,7 @@ VoxelWright is in private beta. The plugin code is kept in a private repository.
    - [Import a MagicaVoxel file](docs/import-magica-voxel.md)
    - [Import a Java Edition schematic](docs/import-java-schematic.md)
    - [Import a Bedrock Edition structure](docs/import-bedrock-structure.md)
+   - [Import part of a Bedrock Edition world](docs/import-bedrock-world.md)
    - [Turn a Studio model into voxels](docs/voxelize-studio-model.md)
    - [Make a VoxelWright model use fewer Parts](docs/optimize-parts.md)
    - [Add textures](docs/textures.md)
@@ -41,7 +43,7 @@ New to voxel tools? The [glossary](docs/glossary.md) explains the words used in 
 - Java Edition: [WorldEdit clipboard and schematic guide](https://worldedit.enginehub.org/en/latest/usage/clipboard/)
 - Bedrock Edition: [Microsoft's Structure Blocks guide](https://learn.microsoft.com/en-us/minecraft/creator/documents/structures/introductiontostructureblocks?view=minecraft-bedrock-stable)
 
-These are outside guides maintained by WorldEdit and Microsoft. They show how to select a build and save the file that VoxelWright opens.
+These are outside guides maintained by WorldEdit and Microsoft. They show how to select a build and save the files that VoxelWright opens. For a Bedrock world archive, read [Import part of a Bedrock Edition world](docs/import-bedrock-world.md).
 
 ## Ask for help or share an idea
 
