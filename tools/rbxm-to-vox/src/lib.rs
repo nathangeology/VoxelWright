@@ -38,33 +38,51 @@ fn collect_models(dom: &WeakDom) -> Result<Vec<VoxelModel>> {
         .descendants()
         .filter(|instance| grid_attributes(instance).is_some())
         .collect();
+    let use_export_roots = grids.is_empty();
+    let roots: Vec<_> = if use_export_roots {
+        dom.descendants()
+            .filter(|instance| export_attributes(instance).is_some())
+            .collect()
+    } else {
+        grids
+    };
 
-    if grids.is_empty() {
+    if roots.is_empty() {
         bail!(
-            "no VoxelWright voxel grid was found; export a VoxelWright-generated model as a binary .rbxm package"
+            "no VoxelWright export was found; export a VoxelWright-generated model as a binary .rbxm package"
         )
     }
 
-    let mut output = Vec::with_capacity(grids.len());
-    for grid in grids {
-        let attributes = grid_attributes(grid).expect("filtered above");
+    let mut output = Vec::with_capacity(roots.len());
+    for root in roots {
+        let attributes = if use_export_roots {
+            export_attributes(root).expect("filtered above")
+        } else {
+            grid_attributes(root).expect("filtered above")
+        };
         if attribute_bool(attributes, "VoxelToolkitHasShapeParts") == Some(true) {
             bail!(
                 "{} uses Common Shapes, which v1 cannot export losslessly; re-import with Full Cubes before exporting",
-                grid.name
+                root.name
             )
         }
-        let axis_mapping = attribute_string(attributes, "AxisMapping").unwrap_or("vox");
+        let axis_mapping = attribute_string(attributes, "AxisMapping").unwrap_or(
+            if use_export_roots && root.name == "VoxelizedSelection" {
+                "xyz"
+            } else {
+                "vox"
+            },
+        );
         if axis_mapping != "vox" && axis_mapping != "xyz" {
             bail!(
                 "{} has an unsupported AxisMapping value: {axis_mapping}",
-                grid.name
+                root.name
             )
         }
 
         let mut source_voxels = BTreeMap::new();
-        for child in dom.descendants_of(grid.referent()) {
-            if child.referent() == grid.referent() || child.class.as_str() != "Part" {
+        for child in dom.descendants_of(root.referent()) {
+            if child.referent() == root.referent() || child.class.as_str() != "Part" {
                 continue;
             }
             let Some(part_attributes) = attributes_of(child) else {
@@ -117,7 +135,7 @@ fn collect_models(dom: &WeakDom) -> Result<Vec<VoxelModel>> {
             }
         }
         if source_voxels.is_empty() {
-            bail!("{} has no generated Full Cubes parts", grid.name)
+            bail!("{} has no generated Full Cubes parts", root.name)
         }
         output.push(remap_model(source_voxels, axis_mapping)?);
     }
@@ -127,6 +145,11 @@ fn collect_models(dom: &WeakDom) -> Result<Vec<VoxelModel>> {
 fn grid_attributes(instance: &Instance) -> Option<&Attributes> {
     let attributes = attributes_of(instance)?;
     (attribute_bool(attributes, "VoxelToolkitGrid") == Some(true)).then_some(attributes)
+}
+
+fn export_attributes(instance: &Instance) -> Option<&Attributes> {
+    let attributes = attributes_of(instance)?;
+    attribute_number(attributes, "VoxelToolkitVersion").map(|_| attributes)
 }
 
 fn attributes_of(instance: &Instance) -> Option<&Attributes> {
@@ -147,6 +170,14 @@ fn property<'a>(instance: &'a Instance, name: &str) -> Option<&'a Variant> {
 fn attribute_bool(attributes: &Attributes, key: &str) -> Option<bool> {
     match attributes.get(key) {
         Some(Variant::Bool(value)) => Some(*value),
+        _ => None,
+    }
+}
+
+fn attribute_number(attributes: &Attributes, key: &str) -> Option<f64> {
+    match attributes.get(key) {
+        Some(Variant::Float32(value)) => Some(f64::from(*value)),
+        Some(Variant::Float64(value)) => Some(*value),
         _ => None,
     }
 }
@@ -233,7 +264,12 @@ fn remap_model(source: BTreeMap<[i32; 3], Rgba>, axis_mapping: &str) -> Result<V
         i64::from(max[2]) - i64::from(min[2]) + 1,
     ];
     if size.iter().any(|dimension| *dimension > 256) {
-        bail!("a model is larger than MagicaVoxel's 256-voxel size limit")
+        bail!(
+            "model dimensions are {} × {} × {}; MagicaVoxel allows at most 256 on each axis. Re-voxelize with a larger voxel size before exporting",
+            size[0],
+            size[1],
+            size[2]
+        )
     }
     let size = size.map(|dimension| dimension as u32);
 
@@ -356,6 +392,31 @@ mod tests {
         bytes
     }
 
+    fn selection_package() -> Vec<u8> {
+        let part = InstanceBuilder::new("Part")
+            .with_property("Color", Color3uint8::new(240, 120, 50))
+            .with_property(
+                "Attributes",
+                attrs(Vector3::new(0.0, 0.0, 0.0), Vector3::new(2.0, 1.0, 1.0)),
+            );
+        let dom = WeakDom::new(
+            InstanceBuilder::new("Model")
+                .with_name("VoxelizedSelection")
+                .with_property(
+                    "Attributes",
+                    Attributes::new().with("VoxelToolkitVersion", 1.0_f64),
+                )
+                .with_child(
+                    InstanceBuilder::new("Model")
+                        .with_name("VoxelizedModel")
+                        .with_child(part),
+                ),
+        );
+        let mut bytes = Vec::new();
+        rbx_binary::to_writer(&mut bytes, &dom, &[dom.root_ref()]).unwrap();
+        bytes
+    }
+
     #[test]
     fn converts_tagged_full_cubes_to_vox() {
         let mut output = Vec::new();
@@ -381,5 +442,13 @@ mod tests {
     fn rejects_common_shapes() {
         let error = convert_to_vox(package(true).as_slice(), Vec::new()).unwrap_err();
         assert!(error.to_string().contains("Common Shapes"));
+    }
+
+    #[test]
+    fn converts_voxelized_selection_exports() {
+        let mut output = Vec::new();
+        let summary = convert_to_vox(selection_package().as_slice(), &mut output).unwrap();
+        assert_eq!(summary.voxels, 2);
+        assert_eq!(&output[32..44], &[2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]);
     }
 }

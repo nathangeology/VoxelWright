@@ -17,7 +17,7 @@ The converter runs entirely on your computer. It uploads nothing and has no tele
 
 ## What v1 supports
 
-- VoxelWright-generated **Full Cubes** and optimized full-cube grids.
+- VoxelWright-generated **Full Cubes**, optimized full-cube grids, and **Voxelize Selection** exports.
 - Multiple VoxelWright grid models in one package.
 - Part color and transparency.
 
