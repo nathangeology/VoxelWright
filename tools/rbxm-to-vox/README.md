@@ -1,10 +1,10 @@
 # VoxelWright RBXM to VOX
 
-Free, local command-line converter for VoxelWright exports. It turns a binary Roblox model package (`.rbxm`) made by VoxelWright into a MagicaVoxel (`.vox`) file.
+This free local converter turns a VoxelWright Roblox model package (`.rbxm`) into a MagicaVoxel (`.vox`) file. It uploads nothing.
 
 ## Use it
 
-1. In Roblox Studio, use VoxelWright with **Full Cubes** output. Select the generated model, open **Optimize Existing**, click **Analyze Generated Model**, then click **Save RBXM for MagicaVoxel** and save the native Studio prompt as a binary Roblox model package (`.rbxm`).
+1. In Roblox Studio, create a VoxelWright model with **Full Cubes** output. Select it, open **Optimize**, click **Analyze Generated Model**, then click **Save RBXM for MagicaVoxel**. Save the Studio prompt as a binary Roblox model package (`.rbxm`).
 2. Install [Rust](https://rustup.rs/), then run from this folder:
 
    ```sh
@@ -13,15 +13,15 @@ Free, local command-line converter for VoxelWright exports. It turns a binary Ro
 
 3. Open the generated `.vox` file in MagicaVoxel.
 
-The converter runs entirely on your computer. It uploads nothing and has no telemetry.
+For a Studio-first walkthrough and fixes for common errors, read [Export a VoxelWright model to MagicaVoxel](../../docs/export-magica-voxel.md).
 
 ## What v1 supports
 
-- VoxelWright-generated **Full Cubes**, optimized full-cube grids, and **Voxelize Selection** exports.
+- VoxelWright-generated **Full Cubes**, optimized full-cube grids, and models made with **Voxelize**.
 - Multiple VoxelWright grid models in one package.
 - Part color and transparency.
 
-It deliberately rejects **Common Shapes** output, arbitrary untagged Roblox parts, incomplete metadata, models larger than 256 voxels on an axis, and exports with more than 255 colors. Re-import using Full Cubes before converting.
+It rejects **Common Shapes** output, untagged Roblox parts, incomplete metadata, models larger than 256 voxels on an axis, and exports with more than 255 colors. Re-import with Full Cubes before converting.
 
 Textures, materials, lights, scripts, sign text, and other Roblox-only behavior do not exist in the MagicaVoxel voxel format and are not exported.
 

@@ -22,17 +22,19 @@ VoxelWright is in private beta. The plugin code is kept in a private repository.
 
 1. Read the [quick start](docs/quick-start.md).
 2. Pick a guide:
+   - [Install or update VoxelWright](docs/install-update.md)
    - [Import a MagicaVoxel file](docs/import-magica-voxel.md)
    - [Import a Java Edition schematic](docs/import-java-schematic.md)
    - [Import a Bedrock Edition structure](docs/import-bedrock-structure.md)
    - [Import part of a Bedrock Edition world](docs/import-bedrock-world.md)
    - [Turn a Studio model into voxels](docs/voxelize-studio-model.md)
    - [Make a VoxelWright model use fewer Parts](docs/optimize-parts.md)
-   - [Export a VoxelWright model to MagicaVoxel](tools/rbxm-to-vox/README.md)
+   - [Export a VoxelWright model to MagicaVoxel](docs/export-magica-voxel.md)
    - [Add textures](docs/textures.md)
+   - [Check supported files, block shapes, and limits](docs/minecraft-compatibility.md)
 3. If something goes wrong, read [Troubleshooting](docs/troubleshooting.md).
 
-New to voxel tools? The [glossary](docs/glossary.md) explains the words used in the plugin.
+New to voxel tools? The [glossary](docs/glossary.md) explains the words used in the plugin. See [release notes](docs/release-notes.md) and [known issues](docs/known-issues.md) before updating a beta build.
 
 ## Brand and store work
 

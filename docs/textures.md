@@ -22,7 +22,7 @@ VoxelWright can place Roblox image assets on visible block faces. It includes an
 8. Press Enter to save the mapping.
 9. Check the preview and texture count before building.
 
-Your saved mapping overrides the built-in replacement map for that block face. Mappings stay in your local plugin settings for later imports.
+Your saved mapping replaces the built-in mapping for that block face. Mappings stay in your local plugin settings for later imports.
 
 ## Water mappings
 
@@ -31,7 +31,17 @@ Your saved mapping overrides the built-in replacement map for that block face. M
 3. Create a new import with **Textured Exposed Faces**.
 4. Start Studio Play/Test to see water scroll across horizontal and vertical faces.
 
-Water does not move while Studio is only editing. Use a new import after changing its mapping so the output includes the water animation.
+Water does not move while Studio is only editing. Re-import after changing the water mapping. Post-build texture editing adds normal textures, not the water animation script.
+
+## Advanced water control
+
+Each textured water import includes a Script named **VoxelWrightWaterAnimator** inside the generated model. It moves only Texture objects marked as VoxelWright water.
+
+- Leave that Script in the model when you publish a fountain, river, or waterfall.
+- To tune the motion, open the Script and change the two speed values near the `scroll` calculation. The first controls horizontal water; the second makes vertical water fall faster.
+- Keep the Script local to that generated model. Copy it only with its water Textures.
+
+This is an advanced edit. Re-import if you need a fresh default script or if a water mapping is changed.
 
 ## Change textures after a build
 
@@ -46,5 +56,6 @@ Studio Undo removes the full texture edit.
 ## Common problems
 
 - If an image is blank, check its ID and Roblox permissions.
-- Textures work with both **Full Cubes** and **Common Shapes**. A Common Shape applies the visible source block faces to its editable component boxes.
+- Textures work with both **Full Cubes** and **Common Shapes**. A Common Shape applies visible source block faces to its editable component boxes.
 - Only faces that can be seen get a texture. This keeps the texture count lower.
+- Post-build texture changes work with Full Cubes only. Re-import Common Shapes after changing a mapping.

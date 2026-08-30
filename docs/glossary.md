@@ -14,7 +14,7 @@ The width, height, and depth of the full model.
 
 ## Greedy Cuboids
 
-The current plugin name for joining as many matching blocks as possible. This usually makes the fewest Roblox Parts. The UI will get a simpler name before release.
+The plugin choice that joins as many matching blocks as possible. It usually makes the fewest Roblox Parts.
 
 ## Part
 

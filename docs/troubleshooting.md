@@ -39,7 +39,15 @@ Check the Roblox image ID. Make sure the image has passed moderation and the pla
 
 ## Water does not move
 
-Water moves only during Studio Play/Test. It needs **Textured Exposed Faces** and a mapping for `minecraft:water`. After changing the mapping, create a new import.
+Water moves only during Studio Play/Test. It needs **Textured Exposed Faces** and a mapping for `minecraft:water`. After changing the mapping, create a new import. Check that the generated model still contains **VoxelWrightWaterAnimator**.
+
+## I cannot optimize a generated model
+
+**Optimize** works with VoxelWright Full Cubes models that still form a rigid grid. Moving the whole model is fine. If you edited individual Parts, used Common Shapes, or added textures, select the model and use **Voxelize** instead.
+
+## The MagicaVoxel save button is off
+
+Select a VoxelWright Full Cubes model, open **Optimize**, and click **Analyze Generated Model**. The button is not used for arbitrary Roblox models or Common Shapes output. Read [Export a VoxelWright model to MagicaVoxel](export-magica-voxel.md) for the full flow.
 
 ## I found a bug
 
