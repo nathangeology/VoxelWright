@@ -28,6 +28,7 @@ VoxelWright is in private beta. The plugin code is kept in a private repository.
    - [Import part of a Bedrock Edition world](docs/import-bedrock-world.md)
    - [Turn a Studio model into voxels](docs/voxelize-studio-model.md)
    - [Make a VoxelWright model use fewer Parts](docs/optimize-parts.md)
+   - [Export a VoxelWright model to MagicaVoxel](tools/rbxm-to-vox/README.md)
    - [Add textures](docs/textures.md)
 3. If something goes wrong, read [Troubleshooting](docs/troubleshooting.md).
 

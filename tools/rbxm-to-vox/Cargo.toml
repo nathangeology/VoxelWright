@@ -1,0 +1,12 @@
+[package]
+name = "voxelwright-rbxm-to-vox"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Convert VoxelWright Roblox model packages to MagicaVoxel files"
+
+[dependencies]
+anyhow = "1.0"
+clap = { version = "4.5", features = ["derive"] }
+rbx_binary = "3.0"
+rbx_dom_weak = "4.2"
