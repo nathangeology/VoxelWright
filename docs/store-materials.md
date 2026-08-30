@@ -13,6 +13,22 @@ Official pages:
 
 Check the upload form again before the final export. Roblox can change its rules.
 
+## Store placement and search language
+
+Publish VoxelWright as a **Plugin**, not as a model, texture, or asset pack. Roblox controls the finer Creator Store filters and may change them, so the name, first sentence, and screenshots need to do most of the discovery work.
+
+Use these phrases in the title, description, and image labels where they fit naturally:
+
+- Voxel modeling
+- Building workflow
+- Editable Roblox Parts
+- MagicaVoxel import
+- Java schematic and Bedrock structure import
+- Minecraft world range import
+- Part optimization
+
+Aim at creators building worlds, cities, terrain, voxel art, and block-model games. Avoid describing it as an official Minecraft tool, a texture pack, a model pack, or a general-purpose mesh editor. Those labels either mislead users or put it beside the wrong kind of asset.
+
 ## Name
 
 VoxelWright
@@ -63,6 +79,8 @@ Help and bug reports: <https://github.com/nathangeology/VoxelWright>
 ## Store image plan
 
 Use short labels. Show the real plugin and real output. Do not use copied game art.
+
+Put final PNGs in [`assets/store-media/screenshots`](../assets/store-media/screenshots/README.md). The numbered filenames there match this image order.
 
 ### Image 1: What it makes
 
