@@ -4,7 +4,7 @@ Free, local command-line converter for VoxelWright exports. It turns a binary Ro
 
 ## Use it
 
-1. In Roblox Studio, use VoxelWright with **Full Cubes** output. Select the generated model and save it as a binary Roblox model package (`.rbxm`).
+1. In Roblox Studio, use VoxelWright with **Full Cubes** output. Select the generated model, click **Save RBXM for MagicaVoxel**, and save the native Studio prompt as a binary Roblox model package (`.rbxm`).
 2. Install [Rust](https://rustup.rs/), then run from this folder:
 
    ```sh
