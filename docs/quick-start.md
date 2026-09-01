@@ -33,10 +33,11 @@ If you see a warning badge, click it. The full report says what VoxelWright chan
 
 ## Minecraft choices
 
-Minecraft imports have two extra settings under **Advanced**. Click a setting to switch to its next value.
+Minecraft imports have extra settings under **Advanced**. Click a setting to switch to its next value.
 
 - **Minecraft Geometry**: **Full Cubes** is the simple choice. **Common Shapes** makes editable boxes for common blocks such as stairs, fences, panes, chains, hanging signs, plants, torches, and lanterns.
 - **Appearance**: **Colors Only** uses block colors and materials. **Textured Exposed Faces** adds mapped Roblox images only to faces that are visible.
+- **Animate Fluids**: **Off** adds no runtime code. **On** lets mapped water add one Script that moves it during Play/Test. This choice appears for textured Minecraft imports.
 
 Use the **Texture Mapping Assistant** to review the built-in original replacement map or add your own Roblox image IDs. Read [Add textures](textures.md) before uploading or sharing images.
 

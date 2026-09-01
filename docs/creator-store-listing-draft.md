@@ -12,11 +12,13 @@ Turn voxel files and Studio models into editable Roblox Parts.
 
 ## Main points
 
-- Import `.vox`, `.schem`, and `.mcstructure` files.
+- Import `.vox`, `.schem`, `.mcstructure`, and part of a `.mcworld` file.
 - Turn selected Studio models into voxels.
 - Join blocks to reduce the Part count.
 - Check size, Part count, placement, and file warnings before building.
-- Use your own Roblox texture images.
+- Use original built-in textures or your own Roblox image assets.
+- Make editable shapes for common stairs, slabs, fences, panes, signs, and plants.
+- Optionally animate mapped water. This is Off by default; mapped water adds one runtime Script when enabled.
 - Undo a full build with Studio Undo.
 
 ## Minecraft notice

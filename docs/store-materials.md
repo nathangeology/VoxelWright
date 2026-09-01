@@ -64,13 +64,16 @@ VoxelWright can:
 - Open MagicaVoxel `.vox` files.
 - Open Java `.schem` files.
 - Open Bedrock `.mcstructure` files.
+- Open part of a Bedrock `.mcworld` file.
 - Turn selected Studio models into voxels.
 - Join matching blocks to make fewer Parts.
-- Add your own Roblox texture images.
+- Use original built-in textures or your own Roblox image assets.
+- Make editable shapes for common stairs, slabs, fences, panes, signs, and plants.
+- Optionally animate mapped water. This is Off by default; mapped water adds one runtime Script when enabled.
 - Show warnings before it builds.
 - Undo a finished build with Studio Undo.
 
-Large models can take time. Minecraft mobs, chest items, signs, commands, and redstone behavior are not built. VoxelWright does not include Minecraft textures. You must have permission to use every file and image you import.
+Large models can take time. Minecraft mobs, chest items, commands, and redstone behavior are not built. Supported signs can keep their text. VoxelWright does not include Minecraft textures. You must have permission to use every file and image you import.
 
 > **NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.**
 
@@ -100,9 +103,9 @@ Label: **Join blocks when you need fewer Parts**
 
 Show the same flat wall before and after blocks are joined. Add the two Part counts.
 
-### Image 4: Bring your own textures
+### Image 4: Original or custom textures
 
-Label: **Use your Roblox image assets**
+Label: **Built-in textures or your own**
 
 Show the texture helper and an original textured model. Do not show Minecraft texture art.
 

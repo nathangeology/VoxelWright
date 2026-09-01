@@ -15,6 +15,7 @@ It can:
 - Turn a model in Studio into small 3D blocks called voxels.
 - Join nearby blocks to make fewer Parts.
 - Add your own Roblox texture images to Minecraft-style blocks, including Common Shapes.
+- Optionally animate mapped water during Play/Test. The choice is Off by default; mapped water adds one runtime Script when enabled.
 
 VoxelWright is in private beta. The plugin code is kept in a private repository. This public repository holds help pages and the issue tracker.
 

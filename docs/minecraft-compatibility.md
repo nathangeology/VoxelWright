@@ -33,7 +33,7 @@ For an `.mcworld` archive, choose the X, Y, and Z range you want in VoxelWright.
 
 Block colors and Roblox materials are approximations. Glass, ice, water, leaves, and plants keep known transparency. **Textured Exposed Faces** works in both geometry modes and uses original replacement mappings or image IDs that you provide. It does not contain Minecraft texture art.
 
-Mapped water scrolls during Studio Play/Test. Glowstone, shroomlights, sea lanterns, lanterns, torches, and powered redstone lamps receive Roblox PointLights.
+Mapped water scrolls during Studio Play/Test only when **Animate Fluids** is On. The choice is Off by default. When enabled, mapped water adds one runtime Script to the generated model. The animation follows the chosen voxel size. Glowstone, shroomlights, sea lanterns, lanterns, torches, and powered redstone lamps receive Roblox PointLights.
 
 ## Content that is not imported
 

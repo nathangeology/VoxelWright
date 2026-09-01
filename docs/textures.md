@@ -28,18 +28,22 @@ Your saved mapping replaces the built-in mapping for that block face. Mappings s
 
 1. Search for `minecraft:water` in the **Texture Mapping Assistant**.
 2. Use **Quick: all faces** to set your own approved Roblox image.
-3. Create a new import with **Textured Exposed Faces**.
-4. Start Studio Play/Test to see water scroll across horizontal and vertical faces.
+3. Set **Appearance** to **Textured Exposed Faces**.
+4. Set **Animate Fluids** to **On**. The button tells you that mapped water can add one runtime Script.
+5. Create the import.
+6. Start Studio Play/Test to see water scroll across horizontal and vertical faces.
 
-Water does not move while Studio is only editing. Re-import after changing the water mapping. Post-build texture editing adds normal textures, not the water animation script.
+**Animate Fluids** is Off by default. When it is Off, VoxelWright does not add runtime code. Water does not move while Studio is only editing. Re-import after changing the water mapping or animation choice. Post-build texture editing adds normal textures, not the water animation Script.
 
 ## Advanced water control
 
-Each textured water import includes a Script named **VoxelWrightWaterAnimator** inside the generated model. It moves only Texture objects marked as VoxelWright water.
+When **Animate Fluids** is On and mapped water is created, the import includes one Script named **VoxelWrightWaterAnimator** inside the generated model. It moves only Texture objects marked as VoxelWright water.
 
 - Leave that Script in the model when you publish a fountain, river, or waterfall.
-- To tune the motion, open the Script and change the two speed values near the `scroll` calculation. The first controls horizontal water; the second makes vertical water fall faster.
+- To tune the motion, open the Script and change the two speed values near `horizontalPhase` and `fallingPhase`. The first controls flat water. The second makes vertical water fall faster.
 - Keep the Script local to that generated model. Copy it only with its water Textures.
+
+The animation uses the chosen voxel size. A 1-stud, 4-stud, or custom-stud voxel loops at the same visual rate without jumping when the loop restarts.
 
 This is an advanced edit. Re-import if you need a fresh default script or if a water mapping is changed.
 
