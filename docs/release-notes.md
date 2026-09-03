@@ -1,6 +1,6 @@
 # Release notes
 
-## Unreleased v1.0 work
+## VoxelWright 1.0.0
 
 - Added Bedrock `.mcworld` range import.
 - Added original replacement textures, textured exposed faces, optional animated water, and light sources for common Minecraft blocks.
@@ -10,9 +10,5 @@
 - Made setting buttons switch directly through their available choices.
 - Added a store-safe texture-pack helper. It lists the PNG files needed by the open model and maps images bulk-imported through Studio Asset Manager by file name.
 - Stopped newly loaded packs from keeping old face images on blocks they replace.
-
-## Private beta
-
-VoxelWright is still in private beta. Builds may change before the first public release. Check [known issues](known-issues.md) before updating a project.
 
 Release notes describe user-visible changes only. They do not include private source code or security-sensitive implementation details.

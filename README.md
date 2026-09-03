@@ -17,7 +17,7 @@ It can:
 - Add your own Roblox texture images to Minecraft-style blocks, including Common Shapes.
 - Optionally animate mapped water during Play/Test. The choice is Off by default; mapped water adds one runtime Script when enabled.
 
-VoxelWright is in private beta. The plugin code is kept in a private repository. This public repository holds help pages and the issue tracker.
+VoxelWright 1.0 is ready for its Creator Store launch. The store link will be added here when Roblox publishes the listing. The plugin code is kept in a private repository. This public repository holds help pages and the issue tracker.
 
 ## Start here
 
@@ -36,7 +36,7 @@ VoxelWright is in private beta. The plugin code is kept in a private repository.
    - [Check supported files, block shapes, and limits](docs/minecraft-compatibility.md)
 3. If something goes wrong, read [Troubleshooting](docs/troubleshooting.md).
 
-New to voxel tools? The [glossary](docs/glossary.md) explains the words used in the plugin. See [release notes](docs/release-notes.md) and [known issues](docs/known-issues.md) before updating a beta build.
+New to voxel tools? The [glossary](docs/glossary.md) explains the words used in the plugin. See [release notes](docs/release-notes.md) and [known issues](docs/known-issues.md) before updating.
 
 ## Brand and store work
 

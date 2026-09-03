@@ -1,20 +1,20 @@
 # Install or update VoxelWright
 
-VoxelWright is in private beta. Use the current install link or package sent by the beta owner.
+VoxelWright 1.0 is ready for the Creator Store. The store link will be added here when Roblox publishes the listing.
 
 ## Install
 
-1. Open the link or package you received.
-2. Let Roblox Studio add the plugin to your account or local Studio install.
+1. Open the VoxelWright Creator Store page. Until the listing is live, use the release package supplied by the developer.
+2. Buy or install the plugin, then let Roblox Studio add it to your account.
 3. Restart Studio.
 4. Open the **Plugins** tab and click **VoxelWright**.
 
-If the button is missing, confirm that you signed in to the Roblox account that received beta access. Then restart Studio once more.
+If the button is missing, confirm that Studio uses the same Roblox account that owns the plugin. Then restart Studio once more.
 
 ## Update
 
-1. Close Studio before replacing a locally installed beta package.
-2. Use the newest link or package from the beta owner.
+1. Close Studio before replacing a locally installed test package.
+2. Update VoxelWright through Roblox, or use the newest package supplied by the developer.
 3. Reopen Studio and check the version shown in the VoxelWright window.
 4. Open a small test place before using the update in a larger project.
 
