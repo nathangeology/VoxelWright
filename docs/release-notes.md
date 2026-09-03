@@ -8,6 +8,8 @@
 - Expanded Common Shapes for editable non-cube blocks, including panes, plants, lanterns, chains, and hanging signs.
 - Added the local RBXM-to-VOX converter for Full Cubes output.
 - Made setting buttons switch directly through their available choices.
+- Added a store-safe texture-pack helper. It lists the PNG files needed by the open model and maps images bulk-imported through Studio Asset Manager by file name.
+- Stopped newly loaded packs from keeping old face images on blocks they replace.
 
 ## Private beta
 

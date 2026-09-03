@@ -37,6 +37,14 @@ Click a warning badge. The full report lists color replacements, box-shape copie
 
 Check the Roblox image ID. Make sure the image has passed moderation and the place owner has permission to use it.
 
+If you used **Use Asset Manager Names**, make sure the PNG was imported into this experience and kept the same file name. Open **Show Needed PNG File List** to compare the names. Duplicate names are skipped and must be mapped by hand.
+
+## A texture pack used the wrong block or face
+
+Load the pack again in the newest VoxelWright build. A pack now replaces the whole mapping for each block it matches, so an old top, side, or bottom image cannot remain mixed in.
+
+Some packs use custom Java model files or Bedrock texture lists instead of common file names. Version 1 does not read all of those rules. Open the per-face controls and fix that block by hand. Common Shapes such as stairs and lanterns are editable box copies and may crop textures differently from the source game.
+
 ## VoxelWright Dev says image upload is not available yet
 
 This is not a rate-limit message. Open **File > Beta Features** in Studio. Enable **CreateAssetAsync Luau API**, then restart Studio. Reload the Minecraft file and texture pack after the restart.

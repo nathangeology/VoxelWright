@@ -29,10 +29,14 @@ Show this notice anywhere the listing mentions Minecraft:
 
 VoxelWright does not include Minecraft textures, models, or other Mojang or Microsoft game files. Users must have permission to use and publish their files and images.
 
+## Help and support
+
+Guides, bug reports, and feature requests: <https://github.com/nathangeology/VoxelWright>
+
 ## Before this is published
 
 - Add the store link, price, and current version.
 - Add screenshots made with original or clearly reusable art.
-- Add the privacy and support links.
+- Add the privacy link. Keep the public support link above in the final listing.
 - Check every claim against the release build.
 - Remove words that sound like hype or make a promise we cannot test.

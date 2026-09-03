@@ -8,9 +8,10 @@ VoxelWright can place Roblox image assets on visible block faces. It includes an
 
 - Upload images you made or have permission to use.
 - Make sure the Roblox account or group using the place can use each image asset.
-- Copy each Roblox image ID.
+- For one or two images, copy each Roblox image ID.
+- For a texture pack, you can bulk import its needed PNG files into Asset Manager and keep their file names.
 
-The version 1 store plugin uses Roblox image IDs. [Read the texture-pack guide](texture-packs.md) for open-source tools and ways to prepare pack images.
+The version 1 store plugin uses Roblox image IDs or image names from the current experience. [Read the texture-pack guide](texture-packs.md) for the bulk-import steps and open-source tools.
 
 ## Add a mapping before an import
 
@@ -62,6 +63,6 @@ Studio Undo removes the full texture edit.
 ## Common problems
 
 - If an image is blank, check its ID and Roblox permissions.
-- Textures work with both **Full Cubes** and **Common Shapes**. A Common Shape applies visible source block faces to its editable component boxes.
+- Textures work with both **Full Cubes** and **Common Shapes**. Common Shapes are box copies, so stairs, lanterns, fences, signs, and other detailed blocks may place or crop art differently from Minecraft.
 - Only faces that can be seen get a texture. This keeps the texture count lower.
 - Post-build texture changes work with Full Cubes only. Re-import Common Shapes after changing a mapping.

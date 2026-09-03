@@ -77,7 +77,7 @@ Large models can take time. Minecraft mobs, chest items, commands, and redstone 
 
 > **NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.**
 
-Help and bug reports: <https://github.com/nathangeology/VoxelWright>
+**Help, guides, bug reports, and feature requests:** <https://github.com/nathangeology/VoxelWright>
 
 ## Store image plan
 
@@ -135,5 +135,6 @@ Use captions. Do not use a voice-over unless the final Roblox rules allow it. Sh
 - Use original models and textures in every image.
 - Check text at phone size.
 - Add alt text for each image where Roblox allows it.
+- Keep the public support link in the final description: <https://github.com/nathangeology/VoxelWright>
 - Check every feature claim against the release build.
 - Have a new user read the page without help.

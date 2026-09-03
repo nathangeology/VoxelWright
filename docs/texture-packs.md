@@ -12,16 +12,23 @@ Do not upload Minecraft's built-in textures or someone else's pack without permi
 
 ## Use pack art in VoxelWright version 1
 
-Roblox does not yet let Creator Store plugins create image assets by code. Use this safe manual path:
+Roblox does not yet let Creator Store plugins create image assets by code. VoxelWright can still find the needed files and connect them by name:
 
-1. Open or unzip a pack you may use.
-2. Find the PNG files for the blocks you need.
-3. Upload those images with Roblox Asset Manager or Creator Dashboard.
-4. Wait for Roblox to review them.
-5. Grant your experience access if Roblox asks.
-6. Copy each Roblox image ID.
-7. Paste the IDs into VoxelWright's **Texture Mapping Assistant**.
-8. Save the mapping as a profile if you want to use it again.
+1. Open a `.schem`, `.mcstructure`, or `.mcworld` file in VoxelWright.
+2. Open **Texture Mapping Assistant**.
+3. Click **Load Java or Bedrock Texture Pack** and pick the pack.
+4. Click **Show Needed PNG File List**.
+5. Open or unzip the pack on your computer.
+6. Find the PNG files in the list. Keep each file name the same.
+7. In Studio, open **Asset Manager** and bulk import those PNG files into the current experience.
+8. Wait for Roblox to review the images.
+9. Return to VoxelWright. Click **Use Asset Manager Names**.
+10. Click **Validate All Mapped Asset IDs**.
+11. Set **Appearance** to **Textured Exposed Faces** and build the model.
+
+This uses `rbxgameasset://Images/name`. The link works only in the current experience. If two needed files have the same name, VoxelWright skips both. Rename and map those images by hand with their Roblox image IDs.
+
+You can still paste a numeric Roblox image ID into any block or face. Save a mapping as a profile if you want to use it again.
 
 Read [Add textures](textures.md) for the VoxelWright steps. Roblox's [asset guide](https://create.roblox.com/docs/projects/assets) explains image review and access.
 
@@ -66,6 +73,17 @@ Only images used by the open Minecraft import are uploaded. One action can uploa
 
 If Studio says upload is “not available yet,” the beta feature is off. Enable it and restart Studio. If all images remain, none were uploaded.
 
-Roblox currently blocks the needed asset-creation API in plugins installed from the Creator Store. This preview is not in the version 1 store build. Store users must use the manual steps above.
+Roblox currently blocks the needed asset-creation API in plugins installed from the Creator Store. The version 1 store build can read the pack and prepare name links, but it cannot upload the files. Use the Asset Manager steps above.
+
+## Ideas after version 1
+
+These options need more work or a Roblox platform change:
+
+- Turn on automatic upload in the store plugin if Roblox allows it later.
+- Make a separate local helper plugin for automatic uploads.
+- Make an Open Cloud helper with a safe Roblox sign-in flow. It must not ask people to paste API keys into the plugin.
+- Read Java block model files and Bedrock texture lists for closer one-to-one matches.
+- Add special texture placement for stairs, lanterns, fences, signs, and other shapes made from small boxes.
+- Offer a reviewed open-license pack such as Good Vibes after its files, credit, changes, and Roblox permissions are checked.
 
 Good Vibes states a CC BY 4.0 license. It is not bundled with VoxelWright. A later built-in pack option needs a full license, credit, changed-file, source, Roblox access, and review record before it can ship.
