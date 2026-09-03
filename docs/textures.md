@@ -10,6 +10,8 @@ VoxelWright can place Roblox image assets on visible block faces. It includes an
 - Make sure the Roblox account or group using the place can use each image asset.
 - Copy each Roblox image ID.
 
+The version 1 store plugin uses Roblox image IDs. [Read the texture-pack guide](texture-packs.md) for open-source tools and ways to prepare pack images.
+
 ## Add a mapping before an import
 
 1. Import a `.schem`, `.mcstructure`, or `.mcworld` file.

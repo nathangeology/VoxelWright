@@ -81,15 +81,15 @@ Help and bug reports: <https://github.com/nathangeology/VoxelWright>
 
 ## Store image plan
 
-Use short labels. Show the real plugin and real output. Do not use copied game art.
+Use short labels. Show the real plugin and real output. Do not use Mojang or Microsoft game art. Original art and clearly licensed art are okay when the required credit is included.
 
 Put final PNGs in [`assets/store-media/screenshots`](../assets/store-media/screenshots/README.md). The numbered filenames there match this image order.
 
 ### Image 1: What it makes
 
-Label: **Files and models → editable Parts**
+Label: **Build your model in Minecraft → Bring it into Studio as editable parts**
 
-Show one original voxel model, the VoxelWright window, and the Parts in Studio.
+Show the same original model in Minecraft and Studio. A short arrow should make the direction clear. If the Minecraft side uses licensed third-party textures, print the required credit on the image and keep it in this document set.
 
 ### Image 2: Check before building
 
@@ -107,7 +107,7 @@ Show the same flat wall before and after blocks are joined. Add the two Part cou
 
 Label: **Built-in textures or your own**
 
-Show the texture helper and an original textured model. Do not show Minecraft texture art.
+Show the texture helper and an original textured model. Do not show Mojang or Microsoft texture art.
 
 ### Image 5: Three ways to work
 

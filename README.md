@@ -32,6 +32,7 @@ VoxelWright is in private beta. The plugin code is kept in a private repository.
    - [Make a VoxelWright model use fewer Parts](docs/optimize-parts.md)
    - [Export a VoxelWright model to MagicaVoxel](docs/export-magica-voxel.md)
    - [Add textures](docs/textures.md)
+   - [Make and prepare texture packs](docs/texture-packs.md)
    - [Check supported files, block shapes, and limits](docs/minecraft-compatibility.md)
 3. If something goes wrong, read [Troubleshooting](docs/troubleshooting.md).
 

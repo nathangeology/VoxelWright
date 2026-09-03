@@ -37,6 +37,12 @@ Click a warning badge. The full report lists color replacements, box-shape copie
 
 Check the Roblox image ID. Make sure the image has passed moderation and the place owner has permission to use it.
 
+## VoxelWright Dev says image upload is not available yet
+
+This is not a rate-limit message. Open **File > Beta Features** in Studio. Enable **CreateAssetAsync Luau API**, then restart Studio. Reload the Minecraft file and texture pack after the restart.
+
+The automatic uploader works only in the local **VoxelWright Dev** preview. Roblox currently blocks it in plugins installed from the Creator Store. If the button says every image is still remaining, the failed attempt did not upload any images.
+
 ## Water does not move
 
 Water moves only during Studio Play/Test. It needs **Textured Exposed Faces** and a mapping for `minecraft:water`. After changing the mapping, create a new import. Check that the generated model still contains **VoxelWrightWaterAnimator**.
