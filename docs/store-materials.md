@@ -33,6 +33,10 @@ Aim at creators building worlds, cities, terrain, voxel art, and block-model gam
 
 VoxelWright
 
+## Price
+
+Launch at **US$4.99**, the current minimum paid-plugin price. Check the minimum again on Creator Hub before publishing because Roblox can change it.
+
 ## Logo system
 
 - Use the **primary interlock mark** on the store page and large images.

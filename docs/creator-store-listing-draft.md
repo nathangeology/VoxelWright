@@ -10,6 +10,10 @@ VoxelWright
 
 Turn voxel files and Studio models into editable Roblox Parts.
 
+## Price
+
+US$4.99 at launch. Check Roblox's current minimum paid-plugin price before publishing.
+
 ## Main points
 
 - Import `.vox`, `.schem`, `.mcstructure`, and part of a `.mcworld` file.
@@ -35,7 +39,7 @@ Guides, bug reports, and feature requests: <https://github.com/nathangeology/Vox
 
 ## Before this is published
 
-- Add the store link, price, and current version.
+- Add the store link and current version.
 - Add screenshots made with original or clearly reusable art.
 - Add the privacy link. Keep the public support link above in the final listing.
 - Check every claim against the release build.
