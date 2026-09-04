@@ -41,7 +41,7 @@ Mobs, other entities, inventories, chest contents, command data, ticks, biomes, 
 
 ## Size and performance limits
 
-| Limit | Current beta |
+| Limit | Current Version |
 | --- | --- |
 | Input selection | 3,000,000 block cells; 2,048 cells on any axis. |
 | Generated output | 50,000 Parts. |
