@@ -2,7 +2,7 @@
 
 > **NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.**
 
-VoxelWright reads Bedrock structure files ending in `.mcstructure`. You do not need to turn the world into Java Edition first.
+VoxelWright 1.2 reads versions 1 and 2 of Bedrock structure files ending in `.mcstructure`. You do not need to turn the world into Java Edition first.
 
 ## Outside tutorial
 
@@ -27,7 +27,7 @@ File export is available in Bedrock for Windows.
 3. Check the size, Part estimate, and warning badges.
 4. Click a warning badge to read the full report.
 5. Choose a voxel size and placement.
-6. Open **Advanced** only if you want block-shape or texture options.
+6. Choose block shapes and textures in the main setup panel.
 7. Click **Create Editable Parts**.
 
 Entities, chest contents, sign text, commands, and block behavior are not built in Studio. The report lists records that were skipped.

@@ -1,5 +1,18 @@
 # Release notes
 
+## VoxelWright 1.2.0
+
+The 1.2.0 release package is ready. Creator Store availability depends on the listing update.
+
+- Reimport a Minecraft environment with its saved settings and texture mappings. Keep NPCs, scripts, and other additions in `StudioAdditions`; updates replace the generated blocks.
+- Optionally fill caves below a chosen height or give fully hidden blocks one block type so more blocks can merge. Check the Part estimate before building.
+- Keep Minecraft shape and texture options visible in the main setup panel.
+- Preserve grass thinning and its protected areas when reimporting.
+- Fix grass texture alignment, missing plant faces in dense beds, and missing textures beside partial block shapes.
+- Read both versions 1 and 2 of Bedrock `.mcstructure` files.
+
+Older imports need one fresh import to use saved-setting updates. See [known issues](known-issues.md) before reimporting.
+
 ## VoxelWright 1.0.0
 
 - Added Bedrock `.mcworld` range import.

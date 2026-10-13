@@ -2,6 +2,11 @@
 
 ## Current limits
 
+- Reimport replaces the `Generated` blocks. Keep custom NPCs, scripts, and props in `StudioAdditions`. Direct edits or object references to generated Parts are not preserved. Older imports need one fresh managed import first.
+- Move or rotate the environment root to place it. Studio model scaling with `ScaleTo` is not supported by reimport; choose the voxel size on the first import.
+- Cave filling can close roofed rooms and tunnels. Keep its height below spaces you want to preserve.
+- Chunking is planned for a later release.
+
 - Common Shapes are editable box approximations, not pixel-perfect Minecraft models. Stairs can crop face art in surprising ways. Lanterns, fences, signs, and other small-box shapes do not yet use Minecraft model UV data.
 - Texture-pack matching uses common file names. It does not yet read every Java block-model file or Bedrock texture-list rule, so some unusual packs need manual corrections.
 - Creator Store plugins cannot create texture assets by code. Version 1 lists the needed PNG files and maps Asset Manager image names after you import them into the current experience.
